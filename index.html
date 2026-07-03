@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<HEAd>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+    <title>Heathers</title>
+
+    <link rel = "icon" type = "image/png" href="Imgs/monimg.png">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+    
+</HEAd>
+
+<BODy>
+    <!--Pantalla de carga-->
+    <div id="loader">
+        <div class="loader-content">
+            <div class="loader-circle"></div>
+            <p>BIENVENIDOS</p>
+        </div>
+    </div>
+
+    <!-- Particulas -->
+    <div id="particles"></div>
+
+    <!-- Luces -->
+    <div class="spotlight spotlight-1"></div>
+    <div class="spotlight spotlight-2"></div>
+    <div class="spotlight spotlight-3"></div>
+
+    <!-- Telones-->
+    <div class="curtain curtain-left">
+    <div class="curtainTexture"></div>
+    </div>
+
+    <div class="curtain curtain-right">
+    <div class="curtainTexture"></div>
+    </div>
+
+    <!-- Contenido principal -->
+    <main id="welcomeScreen">
+        <section class="hero">
+            <!-- LOGO PNG -->
+            <img src="Imgs/Tit.png" id="logo" draggable="false">
+            <p class="subtitle"> Programa Digital </p>
+
+            <div class="buttons">
+                <button id="programBtn">
+                    VER PROGRAMA
+                </button>
+
+                <button id="musicBtn">
+                    ACTIVAR MÚSICA
+                </button>
+
+                <button id="videoBtn">
+                    GALERÍA
+                </button>
+            </div>
+
+<!--Redes sociales-->
+<div class="redes">
+
+<div id="redes-sociales">
+        <br><br>
+    <p>Síguenos en nuestras redes</p>
+
+    <div id="iconos-redes">
+
+        <a href="https://www.instagram.com/arte.iuventus?igsh=anM1dWU5OHpjaDRm" target="_blank">
+            <img src="Imgs/arte.png" alt="Instagram" width="50">
+        </a>
+   
+        <a href="https://www.facebook.com/iuventus.comunidad" target="blank">
+            <img src="Imgs/face.png" alt="Facebook" width="50">
+        </a>
+
+        <a href="https://www.instagram.com/iuventus.comunidad?igsh=MW8wOGV1NGtpNXd4eA==" target="blank">
+            <img src="Imgs/comu.png" alt="YouTube" width="50">
+        </a>
+
+    </div>
+</div>
+</div>
+
+
+        </section>
+    </main>
+
+    <!-- Libro -->
+    <section id="bookScene">
+        <header class="bookHeader">
+            <button id="backBtn">
+                ← Inicio
+            </button>
+        </header>
+
+        <div id="flipbook">
+            <div id="book"></div>
+        </div>
+    </section>
+
+    <!-- Videos -->
+
+    <div id="videoModal">
+        <div class="videoContainer">
+            <button id="closeVideo">
+                ✕
+            </button>
+
+            <video
+                id="video"
+                controls
+                playsinline
+            >
+
+                <source
+                    src="assets/video/trailer.mp4"
+                    type="video/mp4">
+            </video>
+        </div>
+    </div>
+
+
+
+    <!-- Musica -->
+
+    <audio id="music"loop >
+        <source src="Arch/Seven.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Fondo -->
+    <div class="background-gradient"></div>
+
+    <!-- Overlay -->
+    <div class="background-overlay"></div>
+
+    <!-- Futuras escenas -->
+    <div id="effectsLayer"></div>
+
+     <!-- ==================================================
+                VISOR DE PÁGINA
+=================================================== -->
+
+<div id="pageViewer">
+    <div id="viewerOverlay"></div>
+    <button id="viewerClose">
+        ✕
+    </button>
+
+    <button id="viewerPrev">
+        ❮
+    </button>
+
+    <div id="viewerContent">
+
+        <img
+            id="viewerImage"
+            draggable="false"
+        >
+
+    </div>
+
+    <button id="viewerNext">
+
+        ❯
+
+    </button>
+
+</div>
+
+     <!-- ==================================================
+                VISOR DE FOTOS
+=================================================== -->
+<div id="galleryViewer">
+
+    <div id="galleryOverlay"></div>
+
+    <button id="galleryClose">✕</button>
+
+    <button id="galleryPrev">❮</button>
+
+    <div id="galleryContent">
+
+        <img
+            id="galleryImage"
+            draggable="false"
+        >
+
+    </div>
+
+    <button id="galleryNext">❯</button>
+
+</div>
+
+
+
+
+    <script src="app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/page-flip/dist/js/page-flip.browser.min.js"></script>
+    <script src="https://unpkg.com/@panzoom/panzoom/dist/panzoom.min.js"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/hammerjs@2.0.8/hammer.min.js"></script> 
+</BODy>
+</html>
